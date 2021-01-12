@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/markdownit": "^1.2.10",
     "contentful": "^8.1.6",
     "core-js": "^3.6.5",
     "markdown-it-br": "^1.0.0",
