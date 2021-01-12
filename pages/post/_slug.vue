@@ -1,20 +1,20 @@
 <template>
   <div>
     <div class="bg-yellow-300 w-2/5 opacity-25 h-12 mg-tape-slug"></div>
-    <div class="bg-white m-4 py-6 sm:px-20 px-3 box-shadow">
+    <div class="bg-white m-4 py-6 sm:px-20 px-3 shadow">
       <div
         class="sm:w-11/12 sm:h-64 h-32 my-6 mx-auto bg-contain bg-center bg-no-repeat"
         :style="
           'background-image: url(' + post.fields.image.fields.file.url + ')'
         "
       ></div>
-      <div class="content-wrap">
-        <h1 class="text-center text-3xl">
+      <div class="">
+        <h1 class="text-center text-4xl">
           {{ post.fields.title }}
         </h1>
-        <p class="text-center text-sm">
-          {{ post.fields.subtitle }}
-        </p>
+        <small class="text-gray-500 block text-right">{{
+          getFormattedDate(post.fields.date)
+        }}</small>
         <div class="content" v-html="$md.render(post.fields.content)"></div>
       </div>
     </div>
@@ -37,6 +37,20 @@ export default {
         };
       })
       .catch(console.error);
+  },
+  methods: {
+    /**
+     * 日付を年月日形式で表示させる
+     * @param {number} - 投稿日時
+     * @return {string} - 年月日形式で返す
+     */
+    getFormattedDate(date) {
+      const originDate = new Date(date);
+      const year = originDate.getFullYear();
+      const month = originDate.getMonth() + 1;
+      const day = originDate.getDate();
+      return `${year}年${month}月${day}日`;
+    }
   }
 };
 </script>
@@ -44,21 +58,28 @@ export default {
 <style>
 .content h1 {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin: 25px 0;
   border-bottom: 2px solid #000;
+  padding-left: 0.5rem;
 }
 .content h2 {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 20px 0;
   border-bottom: 1px solid #eee;
 }
 .content h3 {
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin: 15px 0;
 }
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
 .content a {
   color: blue;
 }
@@ -90,7 +111,7 @@ ul {
   padding: 5px;
 }
 
-.box-shadow {
+.shadow {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
 }
 

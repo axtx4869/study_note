@@ -1,4 +1,9 @@
-import client from "@/plugins/contentful.js";
+const config = require("./contentful.json");
+const contentful = require("contentful");
+const client = contentful.createClient({
+  space: config.CTF_SPACE_ID,
+  accessToken: config.CTF_CDA_ACCESS_TOKEN
+});
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: "static",
@@ -10,7 +15,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "my_blog",
+    title: "STUDY NOTE | エンジニアを目指す大学生のアウトプット用ブログ",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -55,7 +60,8 @@ export default {
     html: true,
     injected: true,
     linkify: true,
-    breaks: false
+    breaks: true,
+    use: ["markdown-it-br"]
   },
 
   fontawesome: {
@@ -63,20 +69,19 @@ export default {
   },
 
   generate: {
-    routes() {
-      return Promise.all([
+    async routes() {
+      const [posts, categories] = await Promise.all([
         client.getEntries({
           content_type: "blogPost"
         }),
         client.getEntries({
           content_type: "category"
         })
-      ]).then(([posts, categories]) => {
-        return [
-          ...posts.items.map(post => `post/${post.fields.slug}`),
-          ...categories.items.map(category => `category/${category.sys.id}`)
-        ];
-      });
+      ]);
+      return [
+        ...posts.items.map(post => `post/${post.fields.slug}`),
+        ...categories.items.map(category => `category/${category.fields.slug}`)
+      ];
     }
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
