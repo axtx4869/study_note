@@ -68,7 +68,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default {
   data() {
     return {
-      backgroundUrl: require("~/assets/image/IMG_3747.jpg")
+      backgroundUrl: require("~/assets/image/img_3747.jpg")
     };
   },
   computed: {
