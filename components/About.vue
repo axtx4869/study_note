@@ -13,7 +13,7 @@
             class="bg-center bg-cover w-16 h-16 mr-4 rounded-full shadow photo"
           ></div>
           <!-- プロフィール画像ここまで -->
-          <!-- GitHab -->
+          <!-- GitHub -->
           <div class="flex justify-center mt-5 text-base">
             <a
               href="https://github.com/axtx4869"
