@@ -52,7 +52,6 @@
 .photo {
   min-width: 4rem;
   min-height: 4rem;
-  background-image: url("~/assets/image/IMG_3747.jpg");
 }
 .mg-tape {
   margin: -35px auto 10px 25%;
