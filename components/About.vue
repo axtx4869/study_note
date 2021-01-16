@@ -11,6 +11,7 @@
           <!-- プロフィール画像 -->
           <div
             class="bg-center bg-cover w-16 h-16 mr-4 rounded-full shadow photo"
+            :style="{ backgroundImage: `url(${backgroundUrl})` }"
           ></div>
           <!-- プロフィール画像ここまで -->
           <!-- GitHub -->
@@ -66,6 +67,11 @@
 <script>
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default {
+  data() {
+    return {
+      backgroundUrl: require("~/assets/image/IMG_3747.jpg")
+    };
+  },
   computed: {
     faGithub() {
       return faGithub;
