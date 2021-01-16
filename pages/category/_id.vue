@@ -1,5 +1,7 @@
 <template>
-  <div class="py-6 w-4/5 m-auto grid gap-6 sm:w-full gr-temp-clm">
+  <div
+    class="py-6 w-4/5 m-auto grid gap-6 sm:w-full gr-temp-clm justify-center"
+  >
     <Card v-for="post in posts" :key="post.sys.id" :post="post" />
   </div>
 </template>

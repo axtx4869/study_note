@@ -82,7 +82,7 @@ export default {
       }
       const classList = ["button", "category"];
       switch (this.categoryId) {
-        //カテゴリがprogrammingの場合
+        //カテゴリがdevelopmentの場合
         case caregoryIds[0]:
           classList.push("blue");
           break;
