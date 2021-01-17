@@ -52,7 +52,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ["Caveat"]
+      families: ["Caveat", "Comic Neue"]
     }
   },
 

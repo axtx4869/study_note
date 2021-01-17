@@ -56,6 +56,10 @@ export default {
 </script>
 
 <style>
+.content {
+  font-family: "Comic Neue", sans-serif;
+}
+
 .content h1 {
   font-weight: bold;
   font-size: 1.8rem;

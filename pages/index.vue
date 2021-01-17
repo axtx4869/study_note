@@ -31,7 +31,7 @@
 }
 
 .hand-writing {
-  font-family: Caveat;
+  font-family: Caveat, sans-serif;
 }
 </style>
 
