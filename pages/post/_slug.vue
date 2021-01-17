@@ -12,9 +12,9 @@
         <h1 class="text-center text-4xl">
           {{ post.fields.title }}
         </h1>
-        <small class="text-gray-500 block text-right pt-3">{{
+        <time class="text-gray-500 block text-right py-2">{{
           getFormattedDate(post.fields.date)
-        }}</small>
+        }}</time>
         <div class="content" v-html="$md.render(post.fields.content)"></div>
       </div>
     </div>
