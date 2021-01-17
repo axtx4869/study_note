@@ -37,10 +37,10 @@
             Shota Furuno
           </h1>
           <p class="text-xl text-justify break-normal">
-            Welocome to my blog. This blog is about my everyday life and what I
-            learn. In order to improve my English-writing skill, I'll try to
-            write the posts in English, the category of which is "Everyday
-            life".<br />
+            Welocome to my blog. I am Shota Furuno, the owner of this blog. This
+            blog is about what I learn and myself. The posts are published on an
+            irregular basis. New functions are going to be added sometime
+            soon...
           </p>
         </div>
         <!-- 紹介文ここまで -->
