@@ -90,7 +90,7 @@ export default {
         case caregoryIds[1]:
           classList.push("green");
           break;
-        //カテゴリがeveryday lifeの場合
+        //カテゴリがmyselfの場合
         case caregoryIds[2]:
           classList.push("red");
           break;

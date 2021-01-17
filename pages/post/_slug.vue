@@ -61,20 +61,20 @@ export default {
 }
 
 .content h1 {
-  font-weight: bold;
+  font-family: "Comic Neue", sans-serif;
   font-size: 1.8rem;
   margin: 25px 0;
   border-bottom: 2px solid #000;
   padding-left: 0.5rem;
 }
 .content h2 {
-  font-weight: bold;
+  font-family: "Comic Neue", sans-serif;
   font-size: 1.5rem;
   margin: 20px 0;
   border-bottom: 1px solid #eee;
 }
 .content h3 {
-  font-weight: bold;
+  font-family: "Comic Neue", sans-serif;
   font-size: 1.2rem;
   margin: 15px 0;
 }

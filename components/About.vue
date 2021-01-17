@@ -29,7 +29,7 @@
               </button>
             </a>
           </div>
-          <!-- GitHabここまで -->
+          <!-- GitHubここまで -->
         </div>
         <!-- 紹介文 -->
         <div class="sm:m-0 -mt-3">
