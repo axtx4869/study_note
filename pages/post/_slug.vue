@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bg-yellow-300 w-2/5 opacity-25 h-12 mg-tape-slug"></div>
-    <div class="bg-white m-4 py-6 sm:px-20 px-3 shadow">
+    <section class="bg-white m-4 py-6 sm:px-20 px-3 shadow">
       <div
         class="sm:w-11/12 sm:h-64 h-32 my-6 mx-auto bg-contain bg-center bg-no-repeat"
         :style="
@@ -9,7 +9,7 @@
         "
       ></div>
       <div class="">
-        <h1 class="text-center text-4xl">
+        <h1 class="text-center text-4xl font-fam-comic">
           {{ post.fields.title }}
         </h1>
         <time class="text-gray-500 block text-right py-2">{{
@@ -17,7 +17,7 @@
         }}</time>
         <div class="content" v-html="$md.render(post.fields.content)"></div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -61,20 +61,17 @@ export default {
 }
 
 .content h1 {
-  font-family: "Comic Neue", sans-serif;
   font-size: 1.8rem;
   margin: 25px 0;
   border-bottom: 2px solid #000;
   padding-left: 0.5rem;
 }
 .content h2 {
-  font-family: "Comic Neue", sans-serif;
   font-size: 1.5rem;
   margin: 20px 0;
   border-bottom: 1px solid #eee;
 }
 .content h3 {
-  font-family: "Comic Neue", sans-serif;
   font-size: 1.2rem;
   margin: 15px 0;
 }

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-3 lg:mx-6 mx-auto my-6 lg:w-1/2 w-3/4 bg-blue-200 text-2xl hand-writing transform md:-rotate-3 stickey-shadow break-normal"
+    class="p-3 lg:mx-6 mx-auto my-6 lg:w-1/2 w-3/4 bg-blue-200 text-2xl font-fam-caveat transform md:-rotate-3 stickey-shadow break-normal"
   >
     <!-- テープ -->
     <div class="bg-yellow-300 w-2/5 opacity-25 h-12 mg-tape"></div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-48 lg:my-4 mx-auto hand-writing text-2xl">
+  <div class="w-48 lg:my-4 mx-auto font-fam-caveat text-2xl">
     <nuxt-link :to="`category/${category.sys.id}`" :class="addColor()">
       {{ category.fields.name }}
     </nuxt-link>

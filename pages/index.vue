@@ -30,8 +30,12 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.hand-writing {
+.font-fam-caveat {
   font-family: Caveat, sans-serif;
+}
+
+.font-fam-comic {
+  font-family: "Comic Neue", sans-serif;
 }
 </style>
 

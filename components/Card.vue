@@ -3,7 +3,7 @@
     :to="'/post/' + post.fields.slug"
     class="xl:w-64 lg:w-56 w-10/12 mx-auto bg-white box-shadow hover:bg-blue-100"
   >
-    <div class="lg:m-3">
+    <article class="lg:m-3">
       <div class="pl-3 pr-3 pt-3">
         <div
           class="mb-3 w-full h-64 bg-center bg-cover bg-height"
@@ -20,9 +20,9 @@
         <small class="block text-xs text-right underline light-blue"
           >#{{ post.fields.category.fields.name }}</small
         >
-        <h3 class="font-bold py-2">{{ post.fields.title }}</h3>
+        <h3 class="font-bold py-2 font-fam-comic">{{ post.fields.title }}</h3>
       </div>
-    </div>
+    </article>
   </nuxt-link>
 </template>
 
