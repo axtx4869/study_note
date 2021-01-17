@@ -49,15 +49,10 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    [
-      "@nuxtjs/markdownit",
-      "nuxt-fontawesome",
-      "nuxt-webfontloader",
-      "@nuxtjs/google-gtag",
-      {
-        id: "G-QF9B65LERJ"
-      }
-    ]
+    "@nuxtjs/markdownit",
+    "nuxt-fontawesome",
+    "nuxt-webfontloader",
+    ["@nuxtjs/google-analytics", { id: "G-QF9B65LERJ" }]
   ],
 
   webfontloader: {
