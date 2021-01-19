@@ -1,20 +1,11 @@
-# my_blog
+# 概要
+https://study-note.blog/
+学んだことをアウトプットするためのブログです。英語のアウトプットのためにも、専門性の高い内容以外は英語で書いています。
+業務・プライベート問わず、学んだ技術についてアウトプットしていきます。
 
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+# 使用技術・言語
+- JavaScriptフレームワーク: Vue.js / Nuxt.js(v2.14.12)  
+- 静的サイトジェネレーター: Nuxt.js  
+- CSSフレームワーク: TailwindCSS
+- Paas: Netlify
+- CMS: Contentful
