@@ -16,10 +16,18 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: "STUDY NOTE | エンジニアを目指す大学生のアウトプット用ブログ",
+    htmlAttrs: {
+      lang: "en"
+    },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "エンジニアを目指す大学生のブログです。技術や日常について書いています。"
+      }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -52,8 +60,20 @@ export default {
     "@nuxtjs/markdownit",
     "nuxt-fontawesome",
     "nuxt-webfontloader",
-    ["@nuxtjs/google-analytics", { id: "G-QF9B65LERJ" }]
+    ["@nuxtjs/google-analytics", { id: "G-QF9B65LERJ" }],
+    ["@nuxtjs/robots"],
+    ["@nuxtjs/sitemap"]
   ],
+
+  robots: {
+    UserAgent: "*",
+    Sitemap: "https://study-note.blog/sitemap.xml"
+  },
+
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://study-note.blog"
+  },
 
   webfontloader: {
     google: {
