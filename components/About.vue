@@ -1,58 +1,49 @@
 <template>
   <div
-    class="p-3 lg:mx-6 mx-auto my-6 lg:w-1/2 w-3/4 bg-blue-200 text-2xl font-fam-caveat transform md:-rotate-3 stickey-shadow break-normal"
+    class="p-3 lg:mx-6 mx-auto my-6 lg:w-1/2 w-3/4 bg-blue-200 text-2xl font-fam-caveat transform lg:-rotate-3 stickey-shadow break-normal"
   >
     <!-- テープ -->
     <div class="bg-yellow-300 w-2/5 opacity-25 h-12 mg-tape"></div>
     <!-- テープここまで -->
-    <div class="">
-      <div class="flex flex-col sm:flex-row">
-        <div class="sm:block flex justify-center">
-          <!-- プロフィール画像 -->
-          <div
-            class="bg-center bg-cover w-16 h-16 mr-4 rounded-full shadow photo"
-            :style="{ backgroundImage: `url(${backgroundUrl})` }"
-          ></div>
-          <!-- プロフィール画像ここまで -->
-          <!-- GitHub -->
-          <div class="flex justify-center mt-5 text-base">
-            <a
-              href="https://github.com/axtx4869"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button>
-                <fa-layers full-width class="fa-2x block mx-auto mb-1">
-                  <fa :icon="faGithub" />
-                </fa-layers>
-                GitHub
-              </button>
-            </a>
-          </div>
-          <!-- GitHubここまで -->
+    <div class="block sm:flex justify-center">
+      <div class="flex sm:block justify-center">
+        <!-- プロフィール画像 -->
+        <div class="w-20 h-20">
+          <img class="h-full m-auto" :src="profileImg" alt="プロフィール画像" />
         </div>
-        <!-- 紹介文 -->
-        <div class="sm:m-0 -mt-3">
-          <h1 class="font-bold underline line-color">
-            Shota Furuno
-          </h1>
-          <p class="text-xl text-justify break-normal">
-            Welocome to my blog. I am Shota Furuno, the owner of this blog. This
-            blog is about what I learn and myself. The posts are published on an
-            irregular basis. New functions are going to be added sometime
-            soon...
-          </p>
+        <!-- プロフィール画像ここまで -->
+        <!-- GitHub -->
+        <div class="flex justify-center text-base">
+          <a
+            href="https://github.com/axtx4869"
+            class="sm:static relative"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button class="sm:static absolute sm:inset-0 bottom-0">
+              <fa-layers full-width class="fa-2x block mx-auto mb-1">
+                <fa :icon="faGithub" />
+              </fa-layers>
+              GitHub
+            </button>
+          </a>
         </div>
-        <!-- 紹介文ここまで -->
+        <!-- GitHubここまで -->
       </div>
+      <!-- 紹介文 -->
+      <div class="sm:m-0 -mt-3">
+        <h1 class="font-bold underline line-color">
+          {{ myName }}
+        </h1>
+        <p class="text-xl text-justify break-normal">
+          {{ blogInfo }}
+        </p>
+      </div>
+      <!-- 紹介文ここまで -->
     </div>
   </div>
 </template>
 <style>
-.photo {
-  min-width: 4rem;
-  min-height: 4rem;
-}
 .mg-tape {
   margin: -35px auto 10px 25%;
 }
@@ -68,7 +59,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 export default {
   data() {
     return {
-      backgroundUrl: require("~/assets/image/profile.jpg")
+      myName: "Shota Furuno",
+      blogInfo:
+        "Welocome to my blog. I am Shota Furuno, the owner of this blog. This blog is about what I learn and myself. The posts are published on an irregular basis. New functions are going to be added sometime soon...",
+      profileImg: require("~/assets/image/profile_image.png")
     };
   },
   computed: {
