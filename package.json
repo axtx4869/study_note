@@ -12,6 +12,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/markdownit": "^1.2.10",
+    "@nuxtjs/robots": "^2.4.2",
+    "@nuxtjs/sitemap": "^2.4.0",
     "contentful": "^8.1.6",
     "core-js": "^3.6.5",
     "markdown-it-br": "^1.0.0",
