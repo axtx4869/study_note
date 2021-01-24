@@ -12,7 +12,7 @@
         />
       </div>
       <div class="">
-        <h1 class="text-center text-4xl font-fam-comic">
+        <h1 class="text-center md:text-4xl text-2xl font-fam-comic">
           {{ post.fields.title }}
         </h1>
         <time class="text-gray-600 block text-right py-2">{{
@@ -29,18 +29,18 @@
 }
 
 .content h1 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin: 25px 0;
   border-bottom: 2px solid #000;
   padding-left: 0.5rem;
 }
 .content h2 {
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   margin: 20px 0;
   border-bottom: 1px solid #eee;
 }
 .content h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 15px 0;
   text-decoration: underline;
   text-underline-position: under;
@@ -69,13 +69,12 @@ ul {
 }
 
 .content code {
-  background: #eee;
   padding: 2px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
-.content pre code {
-  background: none;
-  padding: 0;
-}
+
 .content pre {
   background: #32375d;
   color: #fff;
