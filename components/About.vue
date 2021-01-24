@@ -62,7 +62,7 @@ export default {
       myName: "Shota Furuno",
       blogInfo:
         "Welocome to my blog. I am Shota Furuno, the owner of this blog. This blog is about what I learn and myself. The posts are published on an irregular basis. New functions are going to be added sometime soon...",
-      profileImg: require("~/assets/image/profile_image.png")
+      profileImg: require("~/assets/image/profile_image.webp")
     };
   },
   computed: {
