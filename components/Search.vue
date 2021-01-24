@@ -1,7 +1,7 @@
 <template>
   <input
     type="text"
-    placeholder="Search for posts"
+    placeholder="投稿を検索"
     class="bg-white m-auto p-2 text-xs rounded w-full focus:outline-none search-shadow"
     v-model="keyword"
     @keypress.enter="$router.push('/search/' + keyword)"
